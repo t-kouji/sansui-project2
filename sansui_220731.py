@@ -47,7 +47,7 @@ def create_new_file_and_write(c,status,add):
         print("新規ファイル名:{}".format(file_name))
         df_h = pd.DataFrame(columns = header)
         df_h.to_csv(file_path, mode="w",encoding='cp932',index=False)
-        c += add #前回のカウントに＋addとする。
+        c = 1 #その日の初回ONなのでカウント１とする。
     else:
 	    print("ファイルに加筆:{}".format(file_name))
 	    c += add #前回のカウントに＋addとする。	
